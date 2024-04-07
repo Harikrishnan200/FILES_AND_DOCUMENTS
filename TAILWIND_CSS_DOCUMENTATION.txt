@@ -1,0 +1,40 @@
+HOW TO CREATE A PROJECT USING TAILWIND CSS 
+
+
+1. node -v  : to check whether the node js is installed or not.
+
+2. npm init : to create package.json file ( press enter up to end )
+
+RUN THE COMMANDS SPECIFIED IN THR DOCUMENTATION
+
+3. npm install -D tailwindcss  
+
+4. npx tailwindcss init
+
+ SPECIFY THE PATH FOR HTML
+ INSIDE THE tailwind.config.js 
+
+5. SET content: ["./dist/*.{html,js}"]  , WHERE 'dist' IS THE FOLDER HTML FILES ARE CREATED
+
+ CREATE A FOLDER NAMED 'src'. INSIDE src CREATE A FILE NAMED input.css AND INSIDE IT COPY THE CODE SHOWN BELOW
+
+6. @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+
+ INSIDE THE HTML FILE ADD THE FILE output.css
+
+7. <link rel="stylesheet" href="output.css">
+
+
+ RUN THE COMMAND 
+
+8. npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch  , WHERE dist IS THE HTML FILES FOLDER
+
+ INSIDE THE package.json FILE ADD
+
+9 .  "scripts": {
+       "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+        }
+
+10. npm run dev
