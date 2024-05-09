@@ -1,0 +1,16 @@
+1. first()
+   eg-
+    
+    # Check if a task with the same text already exists for this user
+    1.  existing_task = Task.objects.filter(task_text=task_text, user=user).first()
+    2.  existing_task = Task.objects.filter(task_text=task_text, user=user)
+
+    
+We filter tasks using Task.objects.filter(task_text=task_text, user=user) to find tasks with the same task_text and associated with the same user
+
+
+The difference between the two lines:
+
+1.The first line returns the first matching object (task) found in the queryset resulting from the filtering criteria specified. If no object matches the criteria, it returns 'None'.
+
+2.The second line returns a queryset containing all the objects (tasks) that match the filtering criteria specified. It may return an empty queryset if no objects match the criteria.
