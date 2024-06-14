@@ -14,3 +14,49 @@ The difference between the two lines:
 1.The first line returns the first matching object (task) found in the queryset resulting from the filtering criteria specified. If no object matches the criteria, it returns 'None'.
 
 2.The second line returns a queryset containing all the objects (tasks) that match the filtering criteria specified. It may return an empty queryset if no objects match the criteria.
+
+
+2. Accessing index in Django template under a for loop
+
+  {% for dr in detailedResult.items %}
+
+<tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{dr.option.forloop.counter}}</td>
+    <td>{{dr.answer.forloop.counter}}</td>
+</tr>
+
+{% endfor %}
+
+
+
+3.  Difference between two types of code
+
+
+->  filter() returns a QuerySet and is used for retrieving zero or more objects.
+->  get() returns a single object and raises an exception if the object is not found or if multiple objects are found.
+
+
+Comparison to .get()
+
+-Using .get():
+
+
+try:
+    student = Student.objects.get(id=student_id)
+except Student.DoesNotExist:
+    student = None
+
+
+-Using .filter().first():
+
+
+student = Student.objects.filter(id=student_id).first()  # here we dont need to use try and execpt
+if student:
+    # Do something with the student object
+else:
+    # Handle the case where no student was found
+
+
+
+
