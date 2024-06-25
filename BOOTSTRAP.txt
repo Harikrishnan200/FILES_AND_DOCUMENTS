@@ -55,3 +55,23 @@ Server-Side Handling: The server (Django backend) processes the form submission 
 ->is it possible to pass arguments with id in html ?
 
 In HTML alone, you cannot directly pass arguments or variables like you would in programming languages or backend frameworks. HTML is a markup language used for structuring and presenting content on the web. However, there are several ways to achieve dynamic behavior or pass context to elements in HTML when combined with server-side scripting languages like Django or JavaScript.
+
+3. 
+Here’s a quick breakdown of Bootstrap's spacing utility classes:
+
+m - applies margin to all sides
+mt - applies margin to the top
+mb - applies margin to the bottom
+ms - applies margin to the start (left in LTR, right in RTL)
+me - applies margin to the end (right in LTR, left in RTL)
+mx - applies margin to the left and right
+my - applies margin to the top and bottom
+Similarly, for padding:
+
+p - applies padding to all sides
+pt - applies padding to the top
+pb - applies padding to the bottom
+ps - applies padding to the start (left in LTR, right in RTL)
+pe - applies padding to the end (right in LTR, left in RTL)
+px - applies padding to the left and right
+py - applies padding to the top and bottom
